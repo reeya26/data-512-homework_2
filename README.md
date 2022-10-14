@@ -50,22 +50,23 @@ data-512-homework_2/
 
 ## Research Implications
 
-We obtain two results from this analysis.
 
+#### What (potential) sources of bias did you discover in the course of your data processing and analysis?
 
-#### 1. List of Dictionaries saved as Json files
+After making a list of countries (wp_countries-no_match.txt), which did not return any Revision ID or ORES Result after passing through the API Call functions, we observe that the following countries feature in this list:
+* United States
+* Canada
+* United Kingdom
+* Australia
 
+These are some of the largest English-langauge speaking countries in the world, and thus not including them in the list of Wikipedia English articles is a potential source of bias. If they were included, the analysis results would look very different.
 
-- [Monthly desktop access](https://github.com/reeya26/data-512-homework_1/blob/main/json/dino_monthly_desktop_201501_202209.json) : Monthly desktop page traffic is based on one single request.
-- [Monthly mobile access](https://github.com/reeya26/data-512-homework_1/blob/main/json/dino_monthly_mobile_201501_202209.json) : The API separates mobile access types into two separate requests, summing these to make one count for all mobile pageviews.
-- [Monthly cumulative](https://github.com/reeya26/data-512-homework_1/blob/main/json/dino_monthly_cumulative_201501_202209.json) : Monthly cumulative data is the sum of all mobile, and all desktop traffic per article.
+#### What biases did you expect to find in the data (before you started working with it), and why?
 
-#### 2. Visualizations based on the analysis
+Considering the wide range of countries being represented, there is a high chance of disproportionate number of articles per country. Every country has its uniqueness including the main language. Considering that for many countries, English is not the main language, those countries would not have many articles displayed. 
 
- 
- - Top 10 Peak Page Views Maximum Average and Minimum Average
- 
-![Result 1](https://github.com/reeya26/data-512-homework_1/blob/main/results/Q1-%20Maximum%20Average%20and%20Minimum%20Average.png "Result 1")
+#### How might a researcher supplement or transform this dataset to potentially correct for the limitations/biases you observed?
 
+In order to address the concerns mentioned above, I would only include English language countries to have a fair comparison between the number of articles being published per country. Also, with certain countries have a large population, the number of educated people isn't always high. I would account for that to compare the research output.
 
 
